@@ -1,0 +1,9 @@
+{
+    "input_address_1": "Makenzijeva 13",
+    "input_address_2": "Glavna 14",
+    "input_postal_code": "21000",
+    "input_city": "Novi Sad",
+    "input_state": "Srbija",
+    "select_country": "RS",
+    "label_client_edited": "Client edited."
+}

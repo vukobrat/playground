@@ -1,0 +1,16 @@
+{
+    
+    "input_search_clients": "input[data-table=search]",
+    "button_edit_client": "a[title=Edit]",
+    "input_address_1": "input[name=address_1]",
+    "input_address_2": "input[name=address_2]",
+    "input_postal_code": "input[name=zip_code]",
+    "input_city": "input[name=city]",
+    "input_state": "input[name=state]",
+    "select_country": "select[name=country_code]",
+    "option_serbia": "Serbia",
+    "button_save" : "button[data-form-id=edit_connection]",
+    "label_client_edited":"p.alert.success.dynamic"
+    
+    
+}

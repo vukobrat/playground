@@ -1,0 +1,15 @@
+{
+    "label_draft_number": "22",
+    "text_description": "New description",
+    "label_invoice_number": "22",
+    "select_language": "English(UK)",
+    "select_currency": "USD",
+    "date": "July 10 2019",
+    "date_due": "After 7 days",
+    "label_purchase_order_number": "12",
+    "label_item_description": "New item description",
+    "label_quantity": "10",
+    "label_price_per_unit": "2",
+    "select_unit": "Unit",
+    "text_invoice_note": "New invoice note"
+}

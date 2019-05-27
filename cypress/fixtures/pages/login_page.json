@@ -1,0 +1,13 @@
+{
+    
+    "label_h2_header": "h2",
+    "label_email_address": "label[for=email_address]",
+    "input_email_adress": "#email_address",
+    "label_password": "label[for=password]",
+    "label_forgot_password": "a[title=\"Recover Password\"]",
+    "input_password": "#password",
+    "button_log_in": ".default",
+    "button_log_in_form": "#login",
+    "label_business_name": "span.business_name",
+    "link_business_url": ".business_url"
+}

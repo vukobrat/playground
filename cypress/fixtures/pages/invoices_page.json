@@ -1,10 +1,11 @@
 {
     
     "button_draft": "[href=\"/invoices/list/draft/client:/profile:/search:/page:\"]",
-    "link_custom_draft_invoice" : "a[title=\"Some description\"]",
+    "link_custom_draft_invoice" : ".title",
+    "label_custom_draft_invoice" : "1111",
     "button_edit_draft_invoice" : ".edit",
-
-    "label_draft_number": "input[data-default=\"Invoice promenjen\"]",
+    "label_draft_tab": "Draft",
+    "label_draft_number": "input.max_100.no_border_radius_left",
     "text_description": ".statement_description > textarea",
     "label_invoice_number": ".max_100",
     "select_language": ".language_select > select",
@@ -17,7 +18,8 @@
     "label_price_per_unit": "[name=\"statement[item_rate]\"]",
     "select_unit": ".unit_lower > .with_addon",
     "text_invoice_note": ".mt40 > textarea",
-    "button_save_draft":"button[data-submit-statement-action=save_draft]"
+    "button_save_draft":".save-button",
+    "label_draft_square": ".tag"
 
 
     

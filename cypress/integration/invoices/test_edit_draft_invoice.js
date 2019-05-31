@@ -17,20 +17,20 @@ describe("Test edit draft invoice", () => {
             .click()
         
         // click on draft tab
-        cy.get(this.invoices_page.button_draft)
-            .should('be.visible')
-            .click()
-
+        cy.contains(this.invoices_page.label_draft_tab)
+            .invoke('attr', 'href')
+            .then((href) => {
+                cy.visit('https://ma1mddx.invoicely.com' + href)
+            })
+        
         // click on custom draft invoice
-        cy.get(this.invoices_page.link_custom_draft_invoice)
-            .should('be.visible')
-            .click()
-
+        cy.contains(this.invoices_page.label_custom_draft_invoice).click()
+        
         // click on edit button
         cy.get(this.invoices_page.button_edit_draft_invoice)
             .should('be.visible')
             .click()
-        cy.wait(2000)
+        
         // populate and assert desired fields
         cy.get(this.invoices_page.label_draft_number)
             .should('be.visible')
@@ -62,12 +62,23 @@ describe("Test edit draft invoice", () => {
             
         
         cy.get(this.invoices_page.date)
-            .clear()
-            .type(this.assert_invoices_page.date)
-            .should("have.value", this.assert_invoices_page.date);        
-        cy.get('[data-day="10"] > .pika-button').click()
+            .invoke('val')
+            .then(existing_date => {
+                cy.log("Existing date: " + existing_date)
+                var month_existing = existing_date.split(' ')[0]
+                var day_existing = existing_date.split(' ')[1]
+                var year_existing = existing_date.split(' ')[2]
+                var new_year = parseInt(year_existing) + 1
+                cy.log('Increased year by one: ' + new_year)
+                
+                cy.get(this.invoices_page.date)
+                .clear()
+                .type(month_existing + ' ' + day_existing + ' ' + new_year)
+                
+            })
 
         cy.get(this.invoices_page.date_due)
+            .focus()
             .should('be.visible')
             .select('0')
             
